@@ -1,0 +1,70 @@
+---
+layout: default
+aviabilities:
+    -
+        begin: 06/04/2013
+        end: 18/05/2013
+        price: 1500 € / semaine
+        mod: A la semaine
+        aviable: Libre
+    -
+        begin: 18/05/2013
+        end: 29/06/2013
+        price: 2000 € / semaine
+        mod: A la semaine
+        aviable: Libre
+    -
+        begin: 29/06/2013
+        end: 27/07/2013
+        price: 2700 € / semaine
+        mod: A la semaine
+        aviable: Libre
+    -
+        begin: 27/07/2013
+        end: 31/08/2013
+        price: 3100 € / semaine
+        mod: A la semaine
+        aviable: Libre
+    -
+        begin: 31/08/2013
+        end: 28/09/2013
+        price: 2700 € / semaine
+        mod: A la semaine
+        aviable: Libre
+    -
+        begin: 28/09/2013
+        end: 16/11/2013
+        price: 2000 € / semaine
+        mod: A la semaine
+        aviable: Libre
+---
+<div class="row">
+    <div class="page header">
+        <h1>Réserver<small> tarifs, modalités et disponibilités pour la location.</small>
+    </div>
+</div>
+
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Début</th>
+                <th>Fin</th>
+                <th>Prix</th>
+                <th>Durée minimum du séjour</th>
+                <th>État</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for av in page.aviabilities %}
+            <tr>
+                <td>{{ av.begin }}</td>
+                <td>{{ av.end }}</td>
+                <td>{{ av.price }}</td>
+                <td>{{ av.mod }}</td>
+                <td>{{ av.aviable }}</td>                    
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
