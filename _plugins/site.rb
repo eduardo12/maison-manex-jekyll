@@ -9,6 +9,11 @@ module Jekyll
 			return " class=\" active\"" if PAGES_NAV[navItem] == url
 			""
 		end
+
+		def pages
+			PAGES_NAV
+		end
+
 	end
 end
 
